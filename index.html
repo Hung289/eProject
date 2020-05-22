@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="" ng-app="myApp" ng-controller="myCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hung.css">
+    <link rel="stylesheet" href="css/nam.css">
+    <link rel="stylesheet" href="css/thang.css">
+    <link rel="stylesheet" href="css/sang.css">
+    <link rel="stylesheet" href="css/thang-responsive.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
+    <link rel="stylesheet" href="css/hung-responsive.css">
+
+</head>
+
+<body>
+    
+    <div ng-include="'layouts/menu.html'"></div>
+
+    <div ng-include="'layouts/header.html'"></div>
+
+    <div ng-include="'layouts/modal.html'"></div>
+
+    <ng-view autoscroll="true"></ng-view>
+
+    <!-- THANG -->
+
+    <div ng-include="'layouts/footer.html'"></div>
+    
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="plugins/angularjs/angular-messages.min.js"></script>
+    <script src="plugins/angular-route/angular-route.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="plugins/bootstrap-3/js/bootstrap.min.js"></script>
+    <!-- jQuery-ui -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Toastr -->
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="plugins/sweetalert/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript">
+
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
+        });
+        
+    </script>
+
+    <!-- Hưng js -->
+    <script src="js/hung.js"></script>
+    <!-- Sang js -->
+    <script src="js/sang.js"></script>
+    <!-- App js -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>

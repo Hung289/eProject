@@ -1,0 +1,287 @@
+<section id="productDetail">
+    <div class="container-fuild">
+
+        <div class="row h_rowtren h_responsive">
+            <div class="h_titleshop ">
+                <a href="#!"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                <span><i class="fa fa-angle-right" aria-hidden="true"></i></span><a href="#!">Shop</a> 
+                <span><i class="fa fa-angle-right" aria-hidden="true"></i></span><a href=""> {{info_product.Category}}</a>
+                <span><i class="fa fa-angle-right" aria-hidden="true"></i> {{info_product.Name}}</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row part1">
+                <div class="col-md-7">
+                    <div class="h_khungto_left clearfix">
+
+                        <div class="itemxx lop01 tile" data-scale="2.4" data-image="images/product/1.png">
+                            <img src="images/product/1.png" alt="">
+                        </div>
+                        <div class="itemxx lop02 tile" data-scale="2.4" data-image="images/product/2.png">
+                            <img src="images/product/2.png" alt="">
+                        </div>
+                        <div class="itemxx lop03 tile" data-scale="2.4" data-image="images/product/3.png">
+                            <img src="images/product/3.png" alt="">
+                        </div>
+                        <div class="itemxx lop04 tile" data-scale="2.4" data-image="images/product/4.png">
+                            <img src="images/product/4.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="h_khung_anh_nho clearfix">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <div ng-click="imageSmall(myText1)" ng-init="myText1='lop01'" class="lop01 h_anhduoinho " data-class="lop01">
+                                        <div class="h_lopmo_anhnho h_act"></div>
+                                        <img  src="images/product/1.png" alt="">
+                                    </div>                                 
+                                </li>
+                                <li>
+                                    <div ng-click="imageSmall(myText2)" ng-init="myText2='lop02'" class="lop02 h_anhduoinho" data-class="lop02">
+                                        <div class="h_lopmo_anhnho"></div>
+                                        <img  src="images/product/2.png" alt="">
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div ng-click="imageSmall(myText3)" ng-init="myText3='lop03'" class="lop03 h_anhduoinho" data-class="lop03">
+                                        <div class="h_lopmo_anhnho"></div>
+                                        <img  src="images/product/3.png" alt="">
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div ng-click="imageSmall(myText4)" ng-init="myText4='lop04'" class="lop04 h_anhduoinho" data-class="lop04">
+                                        <div class="h_lopmo_anhnho"></div>
+                                        <img  src="images/product/4.png" alt="">
+                                    </div> 
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="h_khungto_right">
+                        <h3>{{info_product.Name}}</h3>
+                        <div class="h_fivestar">
+                            <i class="fas fa-star" style="color: #f93;"></i>
+                            <i class="fas fa-star" style="color: #f93;"></i>
+                            <i class="fas fa-star" style="color: #f93;"></i>
+                            <i class="fas fa-star" style="color: #f93;"></i>
+                            <i class="fas fa-star"></i>
+                            <span>( 3 customer reviews)</span>
+                        </div>
+                        <div class="h_price">$ {{info_product.Price | currency:"":2}}</div>
+                        <div class="h_description-child">
+                            {{info_product.Description}}
+                        </div> 
+
+                        <div class="h_khungto_right_color">
+                            <h4>Color</h4>
+                            <nav>
+                                <ul>
+                                    <li title="Black" style="background: #000000"></li>
+                                    <li title="Gray" style="background: #d6d6d6"></li>
+                                    <li title="white" style="background: #ffffff"></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <form method="GET" class="h_quantity" name="add_qty">
+                            <input ng-model="add_qty.quantity" class="form-control" type="number" placeholder="1" min="1" max="99" >
+                            <button ng-click="add_cart_qty(add_qty, info_product)" class="h_quantity_add_cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket cart"> </i> Add to cart
+                                </a>
+                            </button>                            
+                        </form>
+                        
+                        <div class="h_add_compare">
+                            <div class="h_compare">
+                                <a data-toggle="modal" data-target="#modal-compare" style="cursor: pointer;" ng-click="add_compare(info_product)"><i class="fas fa-exchange-alt"></i> Compare</a>
+                            </div>
+                        </div>
+                        <div class="h_product_meta">
+                            <span>CATEGORY: <a href="">{{info_product.Category}}</a></span>
+                            
+                            <span>TAGS: <a href="">HOME1</a></span>
+                            
+                            <span>SHARE: <i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-invision"></i><i class="fab fa-google-plus"></i><i class="fab fa-pinterest-square"></i><i class="far fa-envelope"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row part2">
+                <div class="h_title_DAR">
+                    <nav>
+                        <ul>
+                            <li ><a ng-click="DAR($event)" href="" data-class="h_description" class="selected ">Description</a></li>
+                            <li ><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span><a ng-click="DAR($event)" data-class="h_addi" href="">Additional Information</a><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span></li>
+                            <li ><a ng-click="DAR($event)" data-class="h_review" href="" >Reviews (3)</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="h_content_DAR">
+                    <div class="itemkhoi h_description">
+                        {{info_product.Description}}
+                        <button ng-click="read_more($event)" class="btn-site-outline read-more">Read More</button>
+                    </div>
+                    <div class="itemkhoi h_addi ">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>frame material</th>
+                                    <td><p>Titan,plastic</p></td>
+                                </tr>
+                                <tr>
+                                    <th>eye width</th>
+                                    <td>2.1"</td>
+                                </tr>
+                                <tr>
+                                    <th>colored eyeglasses</th>
+                                    <td>blue</td>
+                                </tr>
+                                <tr>
+                                    <th>Colored frames</th>
+                                    <td>black</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="itemkhoi h_review h_none">
+                        <div class="row">
+                            <div class="col-md-6 h_comment_view">
+                                <div class="h_cmt">
+                                    <div class="h_cmt_avartar">
+                                        <img src="images/thangimages/thang.jpg" alt="">
+                                    </div>
+                                    <div class="h_cmt_right">
+                                        <div class="h_fivestar">
+                                            <i class="fas fa-star" ></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <div class="h_cmt_name">Duc Pham</div>
+                                            <div class="h_cmt_date">Februray 29,2020</div>
+                                        </div>
+                                        <div class="h_cmt_content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi blanditiis, nulla aut autem sint eum laudantium nam culpa repellendus officiis aliquid rem fugit accusamus commodi asperiores, iste itaque impedit. Quibusdam fuga nemo obcaecati, hic qui, explicabo cum consectetur quas illo ipsa nisi sapiente, culpa impedit. Atque eos, quo, soluta totam cupiditate aliquam maiores vitae molestias harum quam asperiores sit vel?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h_cmt ">
+                                    <div class="h_cmt_avartar">
+                                        <img src="images/thangimages/nam.jpg" alt="">
+                                    </div>
+                                    <div class="h_cmt_right">
+                                        <div class="h_fivestar">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <div class="h_cmt_name">Duc Pham</div>
+                                            <div class="h_cmt_date">Februray 29,2020</div>
+                                        </div>
+                                        <div class="h_cmt_content">
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ut veritatis nam consequatur minima architecto, asperiores debitis facere illum consectetur quisquam aperiam repudiandae corrupti dolores, dolor delectus! Labore inventore repellat odio doloremque a hic porro nobis deleniti non eaque nesciunt eius exercitationem, ut deserunt rerum facilis, id dicta. Natus laborum placeat ipsum esse eveniet. Est porro, odio itaque recusandae harum aliquid iure animi earum officia repellat aut mollitia provident similique labore illum! Exercitationem odio autem delectus laudantium similique, iusto blanditiis commodi, neque esse reiciendis necessitatibus voluptas cum quae, quos nemo nihil! Nesciunt repudiandae architecto ab quos est, et necessitatibus magni!
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi blanditiis, nulla aut autem sint eum laudantium nam culpa repellendus officiis aliquid rem fugit accusamus commodi asperiores, iste itaque impedit. Quibusdam fuga nemo obcaecati, hic qui, explicabo cum consectetur quas illo ipsa nisi sapiente, culpa impedit. Atque eos, quo, soluta totam cupiditate aliquam maiores vitae molestias harum quam asperiores sit vel?</p>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class="h_cmt">
+                                    <div class="h_cmt_avartar">
+                                        <img src="images/thangimages/sang.jpg" alt="">
+                                    </div>
+                                    <div class="h_cmt_right">
+                                        <div class="h_fivestar">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <i class="fas fa-star" style="color: #f93;"></i>
+                                            <div class="h_cmt_name">Duc Pham</div>
+                                            <div class="h_cmt_date">Februray 29,2020</div>
+                                        </div>
+                                        <div class="h_cmt_content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi blanditiis, nulla aut autem sint eum laudantium nam culpa repellendus officiis aliquid rem fugit accusamus commodi asperiores, iste itaque impedit. Quibusdam fuga nemo obcaecati, hic qui, explicabo cum consectetur quas illo ipsa nisi sapiente, culpa impedit. Atque eos, quo, soluta totam cupiditate aliquam maiores vitae molestias harum quam asperiores sit vel?</p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="col-md-6 h_comment_post">
+                                <div class="h_comment_post_row1">
+                                    <p>Your email address will not be published. Required fileds are marked *</p>
+                                </div>
+                                <div class="h_comment_post_rating">
+                                    <p>Your rating</p>
+                                    <div class="h_fivestar" id="stars">
+                                        <a ng-click="rating_star(star1)" ng-init="star1 = '1'" class="star active" title='Poor' data-value='1'><i class="fas fa-star " ></i></a>
+                                        <a ng-click="rating_star(star2)" ng-init="star2 = '2'" class="star" title='Fair' data-value='2'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star3)" ng-init="star3 = '3'" class="star" title='Good' data-value='3'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star4)" ng-init="star4 = '4'" class="star" title='Excellent' data-value='4'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star5)" ng-init="star5 = '5'" class="star" title='WOW!!!' data-value='5'><i class="fas fa-star"></i></a>
+                                    </div>
+                                    <p>Your review *</p>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    <p class="h_comment_name">
+                                        <label for="">Name *</label>
+                                        <input type="text" name="" >
+                                    </p>
+                                    <p class="h_comment_email">
+                                        <label for="">Email *</label>
+                                        <input type="text" name="" >
+                                    </p>
+                                    <div class="h_comment_checkbox">
+                                        <input type="checkbox">
+                                        <span> Save my name, email, and website in this browser for the next time I comment.</span>
+                                    </div>
+                                    <div class="h_form_submit">
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row part3">
+                <div class="h_tite_relate">
+                    <h2>Related Product</h2>
+                </div>
+
+                <div class="row h_related_product">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram" ng-repeat="pro in product_child">
+                        <div class="item clearfix ">
+                            <div class="anhduoi responsive">
+                                <div class="h_anhtren">
+                                    <img src="{{pro.Images[1]}}" alt="">
+                                </div>
+                                <div class="h_3icon">
+                                    <nav>
+                                        <ul>
+                                            <li class="nut1" title="Add to compare"><a ng-click="add_compare(pro)" data-toggle="modal" data-target="#modal-compare"><i class='fas fa-exchange-alt' style='font-size:18px'></i></a></li>
+                                            <li class="nut2" title="Quick view"><a ng-click="view_product(pro)" href="#!product"><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                            <li class="nut3" title="Add to cart"><a ng-click="add_cart(pro)" href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                        <ul>
+                                    </nav>
+                                </div>
+                                <div class="h_lopmo"></div>
+                                <div class="h_anhduoi">
+                                    <img src="{{pro.Images[2]}}" class="responsive" alt="">
+                                </div>
+                            </div>
+                            <div class="h_namecate">{{pro.Category}}</div>
+                            <div class="h_namepro"><a ng-click="view_product(pro)" href="#!product">{{pro.Name}}</a></div>
+                            <div class="h_price"><b>$ {{ pro.Price | currency:"":2}}</b></div>
+                            <div class="h_add clearfix"><a href="" ng-click="add_cart(pro)">Add Cart</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../js/hung.js"></script>

@@ -1,0 +1,75 @@
+<header>
+    <div class="slides">
+        <div class="my-nav my-nav-mobile">
+            <div class="nav-slogan">
+                <span class="site-welcome">Welcome to our online store!</span>
+            </div>
+
+            <div class="nav-site">
+                <div class="flex-container">
+                    <div class="nav-logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                        <div class="nav-block block-flex">
+                        <div class="nav-menu border_menu clearfix">
+                            <div class="logo-mobile">
+                                <img src="images/logo-text.png" alt="">
+                            </div>
+                            <div class="">
+                                <ul class="nav navbar-nav menu-block hide-mobile">
+                                    <li ng-class="{ active: isActive('/')}">
+                                        <a href="#!">Home</a>
+                                    </li>
+                                    <li ng-class="{ active: isActive('/shop')}">
+                                        <a href="#!shop">Shop</a>
+                                    </li>
+                                    <li ng-class="{ active: isActive('/blog')}">
+                                        <a href="#!blog">Blog</a>
+                                    </li>
+                                    <li ng-class="{ active: isActive('/contact')}">
+                                        <a href="#!contact">Contact</a>
+                                    </li>
+                                    <li ng-class="{ active: isActive('/about')}">
+                                        <a href="#!about">About</a>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="nav nav-icon navbar-nav navbar-right menu-block ">
+                                    <li class="nav-icon-search" style="padding-right: 0;">
+                                        <a data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
+                                    </li>
+                                    <li class="nav-icon-user" style="padding-right: 0;">
+                                        <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
+                                    </li>
+                                    <li class="nav-icon-cart">
+                                        <a href="javascript:void(0)" ng-click="nav_cart()">
+                                            <i class="fas fa-shopping-basket cart">
+                                                <span>{{carts_qty}}</span>
+                                            </i>
+                                            
+                                            <span class="price-amount">
+                                                <span class="price-currency-symbol">$</span>
+                                                {{carts_total | currency:"":2}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                        <a href="javascript:void(0)" ng-click="menu_mobile()"><i class="fas fa-bars"></i></a>
+                                    </li>
+                                </ul>
+                           </div>                                      
+
+                        </div>
+                        <div class="nav-search clearfix">
+                            <form method="get">
+                                <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
+                                <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
+                                <button type="submit" class="btn-site" value="Search">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,65 @@
+
+    <nav class="nav-fixed" id="nav-fixed">
+        <div class="clearfix">
+            <div class="nav-block">
+                <div class="nav-menu clearfix">
+
+                    <div class="nav-responsive clearfix">
+
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo-text.png" alt="" width="150px">
+                            </a>
+                        </div>
+
+                        <ul class="nav navbar-nav menu-block nav-menu-main">
+                            <li ng-class="{ active: isActive('/')}">
+                                <a href="#!">Home</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/shop')}">
+                                <a href="#!shop">Shop</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/blog')}">
+                                <a href="#!blog">Blog</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/contact')}">
+                                <a href="#!contact">Contact</a>
+                            </li>
+                            <li ng-class="{ active: isActive('/about')}">
+                                <a href="#!about">About</a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="nav navbar-nav navbar-right menu-block ">
+
+                            <li class="nav-icon-main" style="padding-right: 0;">
+                                <a data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
+                            </li>
+                            <li class="hover-down nav-icon-main" style="padding-right: 0;">
+                                <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
+                            </li>
+                            <li class="nav-icon-cart">
+                                <a href="javascript:void(0)" ng-click="nav_cart()">
+                                    <i class="fas fa-shopping-basket cart">
+                                        <span>{{carts_qty}}</span>
+                                    </i>
+                                    
+                                    <span class="price-amount">
+                                        <span class="price-currency-symbol">$</span>
+                                        {{carts_total | currency:"":2}}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                <a href="javascript:void(0)" ng-click="menu_mobile()"><i class="fas fa-bars"></i></a>
+                            </li>
+                        </ul>
+                </div>                                      
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
